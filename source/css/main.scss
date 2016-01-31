@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* ==========================================================================
+ * Imports / Includes
+ * ========================================================================== */
+
+// @import "hover/hover";
+@import "_font-awesome-includes"; // Font Awesome icon library
+@import "_variables-greyscale";   // Import for theme
+@import "_variables";             // Bootstrap variable overrides
+@import "_mixins";                // Custom mixins
+@import "_globals";               // Global elements
+@import "_bootstrap-includes";    // Bootstrap core
+@import "_greyscale";             // Import for theme
+@import "mapbox.js/mapbox.uncompressed"; // includes leaflet
+
+
+/* ==========================================================================
+ * Media queries to target specific breakpoints
+/* ==========================================================================
+ * @media screen and (min-width: $screen-sm-min) {}
+ * @media screen and (min-width: $screen-md-min) {}
+ * @media screen and (min-width: $screen-lg-min) {}
+*/
+
+/*
+*/
+@import "compass/css3/transform";
+
+$default-text-shadow-color: rgba(black, 1);
+$default-text-shadow-blur: 5px;
+$default-text-shadow-v-offset: 1px;
+@import "compass/css3/text-shadow";
+
+.brand-heading {
+  @include single-text-shadow;
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  h1.brand-heading {
+    // font-size: 120px;
+    // @include rotateY(45deg, 600);
+    // @include perspective(600px);
+    // @include transform(translate(300px, 300px) perspective(400px) rotateX(50deg) rotateY(10deg) rotateZ(-60deg));
+  }
+  .thumbnail.pull-right {
+    margin: 0 0 10px 10px;
+  }
+}

@@ -1,0 +1,24 @@
+// Custom JavaScript here
+// =======================================================================
+
+//= require jquery
+//= require jquery.easing/jquery.easing
+
+//= require _bootstrap
+//= require _grayscale
+
+//= require mapbox.js/mapbox.uncompressed
+
+
+$(document).ready(function() {
+  L.mapbox.accessToken = "<%=ENV['MAPBOX_PUBLIC_KEY']%>";
+  var map = L.mapbox.map('map', 'rriemann.p1glcdo7');
+
+  map.setView([45.7693, 4.8327], 15);
+  map.scrollWheelZoom.disable();
+  /*
+  map.featureLayer.on('click', function(e) {
+      map.panTo(e.layer.getLatLng());
+  });
+  */
+});
